@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Endereço</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <main class="container">
+
+    <header class="page-header">
+      <div class="header-tag">SYS // ENDEREÇO</div>
+      <h1 class="page-title">Cadastro<br/><span>de Endereço</span></h1>
+      <div class="header-rule"></div>
+    </header>
+
+    <form id="formEndereco" class="form-card" novalidate>
+
+      <!-- CEP -->
+      <div class="field-group" id="group-cep">
+        <label class="field-label" for="cep">
+          <span class="label-index">01</span>CEP
+          <span class="required-badge">obrigatório</span>
+        </label>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            class="field-input"
+            placeholder="00000-000"
+            maxlength="9"
+            autocomplete="postal-code"
+          />
+          <div class="input-border"></div>
+        </div>
+        <span class="field-hint">Formato: 00000-000</span>
+      </div>
+
+      <!-- Logradouro -->
+      <div class="field-group" id="group-logradouro">
+        <label class="field-label" for="logradouro">
+          <span class="label-index">02</span>Logradouro
+          <span class="required-badge">obrigatório</span>
+        </label>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="logradouro"
+            name="logradouro"
+            class="field-input"
+            placeholder="Rua, Avenida, Travessa..."
+            autocomplete="street-address"
+          />
+          <div class="input-border"></div>
+        </div>
+        <span class="field-hint">Mínimo 5 caracteres</span>
+      </div>
+
+      <!-- Número + UF lado a lado -->
+      <div class="field-row">
+
+        <div class="field-group" id="group-numero">
+          <label class="field-label" for="numero">
+            <span class="label-index">03</span>Número
+            <span class="required-badge">obrigatório</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="numero"
+              name="numero"
+              class="field-input"
+              placeholder="000"
+              inputmode="numeric"
+              maxlength="10"
+            />
+            <div class="input-border"></div>
+          </div>
+          <span class="field-hint">Somente dígitos</span>
+        </div>
+
+        <div class="field-group" id="group-uf">
+          <label class="field-label" for="uf">
+            <span class="label-index">04</span>UF
+            <span class="required-badge">obrigatório</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="uf"
+              name="uf"
+              class="field-input uf-input"
+              placeholder="SP"
+              maxlength="2"
+              autocomplete="address-level1"
+            />
+            <div class="input-border"></div>
+          </div>
+          <span class="field-hint">2 letras maiúsculas</span>
+        </div>
+
+      </div>
+
+      <!-- Complemento -->
+      <div class="field-group" id="group-complemento">
+        <label class="field-label" for="complemento">
+          <span class="label-index">05</span>Complemento
+          <span class="optional-badge">opcional</span>
+        </label>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="complemento"
+            name="complemento"
+            class="field-input"
+            placeholder="Apto, Bloco, Casa..."
+          />
+          <div class="input-border"></div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-footer">
+        <button type="submit" class="btn-submit">
+          <span class="btn-label">Cadastrar Endereço</span>
+          <span class="btn-arrow">→</span>
+        </button>
+        <button type="reset" class="btn-reset">Limpar</button>
+      </div>
+
+    </form>
+
+    <footer class="page-footer">
+      <span>© 2026 — Sistema de Endereços</span>
+      <span class="footer-divider">//</span>
+      <span>v1.0.0</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
